@@ -15,6 +15,11 @@ const main = async () => {
     await dayTxn.wait();
   
     dayCount = await trackerContract.getTotalDays();
+
+    dayTxn = await trackerContract.connect(randomPerson).totaldays();
+    await dayTxn.wait();
+
+    dayCount = await trackerContract.getTotalDays();
 };
 
 const runMain = async () => {
