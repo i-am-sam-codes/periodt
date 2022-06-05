@@ -9,7 +9,7 @@ const main = async () => {
     const trackerContract = await trackerContractFactory.deploy();
     await trackerContract.deployed();
   
-    console.log("Tracker address: ", trackerContract.address);
+    console.log("Tracker address:", trackerContract.address);
   };
   
   const runMain = async () => {
